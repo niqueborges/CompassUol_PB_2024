@@ -1,4 +1,3 @@
-```markdown
 # CompassUol_PB_2024 🚀 - Programa de Bolsas AWS (Junho 2024/Novembro 2024)
 
 Este repositório contém os projetos desenvolvidos durante o **Programa de Bolsas Compass UOL** para formação em **Machine Learning para AWS** (turma junho/2024). Ao longo do estágio, foram realizados diversos projetos e sprints com foco em **AWS**, **Machine Learning**, **Desenvolvimento de APIs**, **Segurança da Informação** e **Infraestrutura como Código**. O objetivo do programa foi aplicar o conhecimento adquirido em situações práticas e demonstrar a capacidade de utilizar as ferramentas da AWS em diferentes cenários.
@@ -72,6 +71,6 @@ Se você tiver dúvidas ou sugestões, entre em contato com os responsáveis pel
 
 - **Responsável pelo repositório**: [Monique da Silva Borges]  
 - **E-mail**: [monique.borges1@gmail.com]  
-```
+
 
 
