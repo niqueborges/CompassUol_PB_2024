@@ -41,14 +41,15 @@ Este repositório contém os projetos desenvolvidos durante o **Programa de Bols
 
 ## **📁 Estrutura do Repositório**
 
-```bash
-├── CompassUol_PB_2024
-├── assets/
-│   └──logo-compass.png
-├── sprint-1-pb-aws-junho-Monique-Borges
-├── sprints-2-3-pb-aws-junho-grupo-5
+```plaintext
+├── CompassUol_PB_2024/
+│   ├── assets/
+│   │   └── logo-compass.png
+│   ├── sprint-1-pb-aws-junho-Monique-Borges/
+│   ├── sprints-2-3-pb-aws-junho-grupo-5/
 ├── README.md
-```
+
+---
 
 ## **🛠️ Tecnologias Utilizadas**
 
