@@ -1,10 +1,10 @@
-# CompassUol_PB_2024 🚀 - Programa de Bolsas AWS (Junho 2024/Novembro 2024)
+# **CompassUol_PB_2024 🚀 - Programa de Bolsas AWS (Junho 2024/Novembro 2024)**
 
 ![CompassUol](./assets/logo-compass.png)
 
 Este repositório contém os projetos desenvolvidos durante o **Programa de Bolsas Compass UOL** para formação em **Machine Learning para AWS** (turma junho/2024). Ao longo do estágio, foram realizados diversos projetos e sprints com foco em **AWS**, **Machine Learning**, **Desenvolvimento de APIs**, **Segurança da Informação** e **Infraestrutura como Código**. O objetivo do programa foi aplicar o conhecimento adquirido em situações práticas e demonstrar a capacidade de utilizar as ferramentas da AWS em diferentes cenários.
 
-## 🧑‍💻 Projetos Realizados
+## **🧑‍💻 Projetos Realizados**
 
 ### **Sprint 1 - Introdução à AWS e Configuração do Ambiente** 🌱
 - Configuração do ambiente AWS com o uso de **AWS CLI** e credenciais **IAM**.
@@ -39,14 +39,17 @@ Este repositório contém os projetos desenvolvidos durante o **Programa de Bols
 - A aplicação foi projetada para ser útil a organizações sociais, como universidades e ONGs, com funcionalidades de transcrição e análise de áudio/imagem.
 - Implementação de soluções de acessibilidade e inteligência artificial para facilitar a comunicação em plataformas públicas.
 
-## 📁 Estrutura do Repositório
+## **📁 Estrutura do Repositório**
 
 ```bash
-├── src  
+├── CompassUol_PB_2024
+├── assets/
+│   └──logo-compass.png
+├── sprint-1-pb-aws-junho-Monique-Borges
 ├── README.md
 ```
 
-## 🛠️ Tecnologias Utilizadas
+## **🛠️ Tecnologias Utilizadas**
 
 - **AWS Lex**: Criação de chatbots interativos 🤖
 - **Amazon Rekognition**: Análise de imagens para detectar objetos, textos e emoções 📸
@@ -59,15 +62,15 @@ Este repositório contém os projetos desenvolvidos durante o **Programa de Bols
 - **Serverless Framework**: Para implementar a infraestrutura como código e deploy serverless 🌐
 - **AWS CLI & Boto3**: Para interagir com os serviços da AWS diretamente no código 🖥️
 
-## 👥 Contribuições
+## **👥 Contribuições**
 
 Este repositório foi desenvolvido por um grupo de alunos participantes do **Programa de Bolsas Compass UOL 2024**. As contribuições de todos os membros do grupo foram essenciais para a realização dos projetos e para o aprendizado coletivo.
 
-## 📜 Licença
+## **📜 Licença**
 
 Este repositório é de uso educacional e foi criado no contexto do **Programa de Bolsas Compass UOL 2024**. É livre para fins de estudo, desde que respeitados os direitos autorais das bibliotecas e frameworks utilizados.
 
-## 📬 Contato
+## **📬 Contato**
 
 Se você tiver dúvidas ou sugestões, entre em contato com os responsáveis pelo repositório:
 
