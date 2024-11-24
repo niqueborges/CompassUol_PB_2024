@@ -1,6 +1,6 @@
 # **📝 Sistema de Cadastro em JavaScript**
 
-![CompassUol](./assets/logo-compass.png)
+![CompassUol](assets/logo-compass.png)
  
 
 ## **👥 Desenvolvedora**
