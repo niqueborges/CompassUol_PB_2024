@@ -5,8 +5,7 @@
 
 ## **👥 Desenvolvedora**
 
-[![Monique da Silva Borges](https://avatars.githubusercontent.com/u/95103547?v=4)](https://github.com/niqueborges)  
-[Monique da Silva Borges](https://github.com/niqueborges)
+- [Monique da Silva Borges](https://github.com/niqueborges)
 
 ---
 
