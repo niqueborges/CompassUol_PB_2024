@@ -45,10 +45,10 @@ sprint-1-pb-aws-junho-Monique-Borges
 │       └── stylesheet.css
 ├── README.md
 ├── .gitignore
-
+```
 ---
 
-## **⚙️ Funcionalidades**
+## **⚙️Funcionalidades**
 
 - Cadastro de novas pessoas com nome, data de nascimento, telefone e email;
 - Armazenamento dos dados utilizando localStorage;
@@ -57,7 +57,7 @@ sprint-1-pb-aws-junho-Monique-Borges
 
 ---
 
-## **🚀 Como usar**
+## **🚀Como usar**
 
 Para utilizar o sistema localmente, siga os passos abaixo:
 
