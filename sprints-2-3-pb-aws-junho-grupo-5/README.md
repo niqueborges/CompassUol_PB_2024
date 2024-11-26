@@ -14,6 +14,19 @@ Este repositório foi desenvolvido por um grupo de alunos participantes do **Pro
 
 *Sistema em JavaScript/NodeJS que produz uma interface para consulta de API pública.*
 
+## **📑 Índice**
+
+1. [📂 Estrutura do Projeto](#-estrutura-do-projeto)
+2. [🛠️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
+3. [📁 Estrutura de Diretórios](#-estrutura-de-diretórios)
+4. [💻 Funcionalidades](#-funcionalidades)
+5. [🚀 Como Usar](#-como-usar)
+6. [🛠️ Etapas do Projeto](#-etapas-do-projeto)
+7. [😓 Dificuldades](#-dificuldades)
+8. [📜 Licença](#-licença)
+
+---
+
 ## **📂 Estrutura do Projeto**
 
 - `index.html`: Contém a estrutura HTML do sistema.
@@ -90,7 +103,7 @@ Este repositório contém o código-fonte do projeto **NBA API**:
 
 5. **Verificar Estatísticas do Time**:
 
-   Ao escolher um time, você será direcionado para uma página que exibe as estatísticas e os jogadores do time na temporada selecionada.
+   Ao escolher um time, você será direcionado para uma página que exibe as estatísticas e os jogadores do time na temporada selecionada.  
    Você pode alterar a temporada usando o menu suspenso para ver as estatísticas e jogadores de anos diferentes.
 
 6. **Botão de Voltar**:
