@@ -10,12 +10,6 @@
 
 ---
 
-## **📜 Descrição**
-
-Este é um projeto simples e funcional de um sistema de cadastro de clientes utilizando HTML5, CSS3, JavaScript e localStorage. O projeto foi refatorado para melhorar a organização, eficiência e experiência do usuário.
-
----
-
 ## **📑 Índice**
 
 1. 📜 [Descrição](#-descrição)  
@@ -27,6 +21,12 @@ Este é um projeto simples e funcional de um sistema de cadastro de clientes uti
 7. 🗓️ [Metodologia de Desenvolvimento](#️-metodologia-de-desenvolvimento)  
 8. 📈 [Refatoração e Melhorias](#-refatoração-e-melhorias)  
 9. 🤔 [Desafios Superados](#-desafios-superados)
+
+---
+
+## **📜 Descrição**
+
+Este é um projeto simples e funcional de um sistema de cadastro de clientes utilizando HTML5, CSS3, JavaScript e localStorage. O projeto foi refatorado para melhorar a organização, eficiência e experiência do usuário.
 
 ---
 
@@ -101,7 +101,7 @@ cd sprint-1-pb-aws-junho-Monique-Borges/src
 
 ---
 
-## **📅 Metodologia de Desenvolvimento**
+## **🗓️ Metodologia de Desenvolvimento**
 
 O projeto foi desenvolvido utilizando a metodologia **Ágil**, dividindo o trabalho em pequenas entregas incrementais para garantir qualidade e rapidez. Além disso, a refatoração seguiu boas práticas de organização e legibilidade do código.
 
