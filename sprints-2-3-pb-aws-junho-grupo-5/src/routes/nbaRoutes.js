@@ -1,12 +1,14 @@
 const express = require('express');
 const axios = require('axios');
 const router = express.Router();
-const API_KEY = 'SUA_API_KEY_AQUI'
+const API_KEY = 'SUA_API_KEY_AQUI';
+
+const API_BASE_URL = 'https://api-nba-v1.p.rapidapi.com/'; // URL base da API NBA
 
 // Rota para obter times
 router.get('/teams', async (req, res) => {
     try {
-        const response = await axios.get('https://api-nba-v1.p.rapidapi.com/teams', {
+        const response = await axios.get(`${API_BASE_URL}teams`, {
             headers: {
                 'X-RapidAPI-Key': API_KEY,
                 'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com'
@@ -34,7 +36,7 @@ router.get('/teams', async (req, res) => {
 router.get('/teams/:id', async (req, res) => {
     try {
         const teamId = req.params.id;
-        const response = await axios.get('https://api-nba-v1.p.rapidapi.com/teams', {
+        const response = await axios.get(`${API_BASE_URL}teams`, {
             headers: {
                 'X-RapidAPI-Key': API_KEY,
                 'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com'
@@ -58,7 +60,7 @@ router.get('/teams/:id/stats', async (req, res) => {
     try {
         const teamId = req.params.id;
         const season = req.query.season;
-        const response = await axios.get('https://api-nba-v1.p.rapidapi.com/teams/statistics', {
+        const response = await axios.get(`${API_BASE_URL}teams/statistics`, {
             headers: {
                 'X-RapidAPI-Key': API_KEY,
                 'X-RapidAPI-Host': 'api-nba-v1.p.rapidapi.com'
@@ -116,7 +118,7 @@ router.get('/teams/:teamId/players', async (req, res) => {
 
     const options = {
         method: 'GET',
-        url: 'https://api-nba-v1.p.rapidapi.com/players',
+        url: `${API_BASE_URL}players`,
         params: {
             team: teamId,
             season: season

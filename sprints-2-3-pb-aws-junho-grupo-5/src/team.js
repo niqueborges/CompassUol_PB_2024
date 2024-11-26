@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const teamStatsDiv = document.getElementById('teamStats');
     const teamInfoDiv = document.getElementById('teamInfo');
     const backButton = document.getElementById('backButton');
-    const localHost = 'http://localhost:3000/'
-    const EC2 = 'SEU_ENDEREÇO_EC2'
+
+    const apiBaseURL = 'http://localhost:3000/';  // Usando somente o localhost
 
     if (teamId) {
-        // IP da instância EC2 para acessar a API
-        fetch(`${localHost}nba/teams/${teamId}`)
+        // Buscar informações do time
+        fetch(`${apiBaseURL}nba/teams/${teamId}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Função para carregar as estatísticas da temporada
     function loadTeamStats(season) {
-        fetch(`${localHost}nba/teams/${teamId}/stats?season=${season}`)
+        fetch(`${apiBaseURL}nba/teams/${teamId}/stats?season=${season}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);
@@ -81,8 +81,9 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
+    // Função para carregar os jogadores da temporada
     function loadTeamPlayers(season) {
-        fetch(`${localHost}nba/teams/${teamId}/players?season=${season}`)
+        fetch(`${apiBaseURL}nba/teams/${teamId}/players?season=${season}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);
@@ -90,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return response.json();
             })
             .then(players => {
+                const playersList = document.getElementById('playersList');
                 playersList.innerHTML = `<h3>Jogadores da Temporada ${season}</h3>`;
                 players.forEach(player => {
                     playersList.innerHTML += `
@@ -111,6 +113,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert('Erro ao buscar os jogadores: ' + error.message);
             });
     }
+
+    // Atualizar estatísticas e jogadores quando a temporada mudar
     seasonSelect.addEventListener('change', function () {
         loadTeamStats(seasonSelect.value);
         loadTeamPlayers(seasonSelect.value);
