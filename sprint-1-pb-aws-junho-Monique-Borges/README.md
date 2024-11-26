@@ -16,14 +16,14 @@ Este é um projeto simples de um sistema de cadastro de clientes utilizando HTML
 
 ## **📑 Índice**
 
-1. 📜 [Descrição](#descrição)  
-2. 📂 [Estrutura](#estrutura)  
-3. 💻 [Tecnologias Utilizadas](#tecnologias-utilizadas)  
-4. 📁 [Estrutura de Diretórios](#estrutura-de-diretórios)  
-5. ⚙️ [Funcionalidades](#funcionalidades)  
-6. 🚀 [Como Usar](#como-usar)  
-7. 🗓️ [Metodologia de Desenvolvimento](#metodologia-de-desenvolvimento)  
-8. 🤔 [Dificuldades](#dificuldades)
+1. 📜 [Descrição](#-descrição)  
+2. 📂 [Estrutura](#-estrutura)  
+3. 💻 [Tecnologias Utilizadas](#-tecnologias-utilizadas)  
+4. 📁 [Estrutura de Diretórios](#-estrutura-de-diretórios)  
+5. ⚙️ [Funcionalidades](#️-funcionalidades)  
+6. 🚀 [Como Usar](#-como-usar)  
+7. 🗓️ [Metodologia de Desenvolvimento](#️-metodologia-de-desenvolvimento)  
+8. 🤔 [Dificuldades](#-dificuldades)
 
 ---
 
