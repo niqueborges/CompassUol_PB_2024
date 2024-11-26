@@ -1,7 +1,6 @@
 # **📝 Sistema de Cadastro em JavaScript**
 
 ![CompassUol](assets/logo-compass.png)
- 
 
 ## **👥 Desenvolvedora**
 
@@ -15,24 +14,38 @@ Este é um projeto simples de um sistema de cadastro de clientes utilizando HTML
 
 ---
 
+## **📑 Índice**
+
+1. 📜 [Descrição](#descrição)  
+2. 📂 [Estrutura](#estrutura)  
+3. 💻 [Tecnologias Utilizadas](#tecnologias-utilizadas)  
+4. 📁 [Estrutura de Diretórios](#estrutura-de-diretórios)  
+5. ⚙️ [Funcionalidades](#funcionalidades)  
+6. 🚀 [Como Usar](#como-usar)  
+7. 🗓️ [Metodologia de Desenvolvimento](#metodologia-de-desenvolvimento)  
+8. 🤔 [Dificuldades](#dificuldades)
+
+---
+
 ## **📂 Estrutura**
 
-- **index.html**: Contém a estrutura HTML do sistema e o formulário de cadastro;
-- **cadastro_clientes.js**: Script JavaScript que implementa as funcionalidades do sistema, incluindo a criação, leitura e exclusão de cadastros, além da interação com o localStorage;
-- **CSS**: Para estilização do formulário;
+- **index.html**: Contém a estrutura HTML do sistema e o formulário de cadastro.
+- **cadastro_clientes.js**: Script JavaScript que implementa as funcionalidades do sistema, incluindo a criação, leitura e exclusão de cadastros, além da interação com o localStorage.
+- **CSS**: Para estilização do formulário.
 - **README.md**: Este arquivo contém informações sobre o projeto, como usá-lo e a sua estrutura.
 
 ---
 
 ## **💻 Tecnologias Utilizadas**
 
-![HTML Badge](https://img.shields.io/badge/HTML-5-%23E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS Badge](https://img.shields.io/badge/CSS-3-%231572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript Badge](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML Badge](https://img.shields.io/badge/HTML-5-%23E34F26?style=for-the-badge&logo=html5&logoColor=white)  
+![CSS Badge](https://img.shields.io/badge/CSS-3-%231572B6?style=for-the-badge&logo=css3&logoColor=white)  
+![JavaScript Badge](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)  
 ![localStorage Badge](https://img.shields.io/badge/localStorage-%23FFB74D?style=for-the-badge&logoColor=black)
 
 ---
-## **📂 Estrutura de Diretórios**
+
+## **📁 Estrutura de Diretórios**
 
 Este repositório contém o código-fonte do projeto **Sistema de Cadastro em JavaScript**:
 
@@ -46,9 +59,10 @@ sprint-1-pb-aws-junho-Monique-Borges
 ├── README.md
 ├── .gitignore
 ```
+
 ---
 
-## **⚙️Funcionalidades**
+## **⚙️ Funcionalidades**
 
 - Cadastro de novas pessoas com nome, data de nascimento, telefone e email;
 - Armazenamento dos dados utilizando localStorage;
@@ -57,7 +71,7 @@ sprint-1-pb-aws-junho-Monique-Borges
 
 ---
 
-## **🚀Como usar**
+## **🚀 Como Usar**
 
 Para utilizar o sistema localmente, siga os passos abaixo:
 
@@ -71,12 +85,12 @@ git clone https://github.com/Compass-pb-aws-2024-JUNHO/sprint-1-pb-aws-junho/tre
 
 - Insira todos os dados do cliente no formulário e clique em "Cadastrar";
 - Os dados serão armazenados localmente no navegador em "Inspecionar", "Application", "Storage", "Local Storage";
-- A lista de cadastros será exibida abaixo do formulário.
+- A lista de cadastros será exibida abaixo do formulário;
 - Para excluir um cadastro, clique no botão "Excluir" abaixo do cadastro desejado.
 
 ---
 
-## **📅 Metodologia de Desenvolvimento**
+## **🗓️ Metodologia de Desenvolvimento**
 
 Adotei a metodologia **Ágil**, com **Sprints** e **Code Reviews** para garantir a qualidade e agilidade no desenvolvimento.
 
@@ -91,7 +105,7 @@ Algumas dificuldades enfrentadas ao desenvolver o sistema:
 - Validar dados de entrada do cliente utilizando JavaScript foi complexo inicialmente, além de ser difícil armazenar e recuperar dados do localStorage e garantir que o formulário funcionasse corretamente em todos os navegadores;
 - Outras dificuldades que ainda estão sendo aprendidas.
 
-Para superar as dificuldades, além dos cursos da Udemy, segui tutoriais de passo a passo e busquei compreender os conceitos por trás de cada tecnologia. Embora o sistema não esteja 100% perfeito a experiência foi muito enriquecedora.
+Para superar as dificuldades, além dos cursos da Udemy, segui tutoriais de passo a passo e busquei compreender os conceitos por trás de cada tecnologia. Embora o sistema não esteja 100% perfeito, a experiência foi muito enriquecedora.
 
 ---
 
