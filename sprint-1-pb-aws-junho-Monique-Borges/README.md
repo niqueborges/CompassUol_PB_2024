@@ -1,7 +1,8 @@
-# **📝 Sistema de Cadastro em JavaScript**
+# **📝 Sistema de Cadastro de Clientes com JavaScript**
 
 ![CompassUol](assets/logo-compass.png)
- 
+
+---
 
 ## **👥 Desenvolvedora**
 
@@ -11,16 +12,19 @@
 
 ## **📜 Descrição**
 
-Este é um projeto simples de um sistema de cadastro de clientes utilizando HTML5, CSS3, JavaScript e localStorage.
+Este é um projeto simples e funcional de um sistema de cadastro de clientes utilizando HTML5, CSS3, JavaScript e localStorage. O projeto foi refatorado para melhorar a organização, eficiência e experiência do usuário.
 
 ---
 
 ## **📂 Estrutura**
 
-- **index.html**: Contém a estrutura HTML do sistema e o formulário de cadastro;
-- **cadastro_clientes.js**: Script JavaScript que implementa as funcionalidades do sistema, incluindo a criação, leitura e exclusão de cadastros, além da interação com o localStorage;
-- **CSS**: Para estilização do formulário;
-- **README.md**: Este arquivo contém informações sobre o projeto, como usá-lo e a sua estrutura.
+- **index.html**: Contém a estrutura HTML do sistema e o formulário de cadastro.
+- **cadastro_clientes.js**: Script JavaScript responsável por:
+  - Gerenciamento do cadastro (criação, exibição e exclusão de clientes).
+  - Validação de dados do formulário.
+  - Manipulação do armazenamento local (localStorage).
+- **stylesheet.css**: Arquivo CSS para estilização do sistema.
+- **README.md**: Este arquivo com informações detalhadas sobre o projeto.
 
 ---
 
@@ -32,9 +36,8 @@ Este é um projeto simples de um sistema de cadastro de clientes utilizando HTML
 ![localStorage Badge](https://img.shields.io/badge/localStorage-%23FFB74D?style=for-the-badge&logoColor=black)
 
 ---
-## **📂 Estrutura de Diretórios**
 
-Este repositório contém o código-fonte do projeto **Sistema de Cadastro em JavaScript**:
+## **📂 Estrutura de Diretórios**
 
 ```plaintext
 sprint-1-pb-aws-junho-Monique-Borges
@@ -46,18 +49,20 @@ sprint-1-pb-aws-junho-Monique-Borges
 ├── README.md
 ├── .gitignore
 ```
----
-
-## **⚙️Funcionalidades**
-
-- Cadastro de novas pessoas com nome, data de nascimento, telefone e email;
-- Armazenamento dos dados utilizando localStorage;
-- Exibição da lista de cadastros existentes;
-- Exclusão de cadastros individualmente.
 
 ---
 
-## **🚀Como usar**
+## **⚙️ Funcionalidades**
+
+- **Cadastro de clientes:** Adicione nome, data de nascimento, telefone e e-mail.
+- **Validação de dados:** Verifique se os campos foram preenchidos corretamente, com validações para telefone e e-mail.
+- **Armazenamento local:** Os dados são salvos no `localStorage` do navegador, garantindo persistência mesmo após recarregar a página.
+- **Exibição de clientes:** Veja a lista completa de clientes cadastrados.
+- **Exclusão individual:** Apague cadastros de forma simples com apenas um clique.
+
+---
+
+## **🚀 Como Usar**
 
 Para utilizar o sistema localmente, siga os passos abaixo:
 
@@ -67,34 +72,59 @@ Para utilizar o sistema localmente, siga os passos abaixo:
 git clone https://github.com/Compass-pb-aws-2024-JUNHO/sprint-1-pb-aws-junho/tree/Monique-Borges
 ```
 
-2. Abra o arquivo `index.html` em seu navegador web e interaja com o sistema:
+2. Navegue até o diretório do projeto:
 
-- Insira todos os dados do cliente no formulário e clique em "Cadastrar";
-- Os dados serão armazenados localmente no navegador em "Inspecionar", "Application", "Storage", "Local Storage";
-- A lista de cadastros será exibida abaixo do formulário.
-- Para excluir um cadastro, clique no botão "Excluir" abaixo do cadastro desejado.
+```bash
+cd sprint-1-pb-aws-junho-Monique-Borges/src
+```
+
+3. Abra o arquivo `index.html` em seu navegador web e interaja com o sistema:
+
+- Preencha o formulário com os dados do cliente e clique em "Cadastrar".
+- Os dados serão armazenados no navegador. Você pode visualizá-los em **Inspecionar > Application > Storage > Local Storage**.
+- A lista de clientes será exibida abaixo do formulário.
+- Para excluir um cliente, clique no botão "Excluir" ao lado do cadastro.
 
 ---
 
 ## **📅 Metodologia de Desenvolvimento**
 
-Adotei a metodologia **Ágil**, com **Sprints** e **Code Reviews** para garantir a qualidade e agilidade no desenvolvimento.
+O projeto foi desenvolvido utilizando a metodologia **Ágil**, dividindo o trabalho em pequenas entregas incrementais para garantir qualidade e rapidez. Além disso, a refatoração seguiu boas práticas de organização e legibilidade do código.
 
 ---
 
-## **🤔 Dificuldades**
+## **📈 Refatoração e Melhorias**
 
-Algumas dificuldades enfrentadas ao desenvolver o sistema:
+### **1. Modularidade**
+- Código separado por responsabilidades:
+  - Manipulação do DOM.
+  - Operações com `localStorage`.
+  - Validação e feedback para o usuário.
 
-- A estrutura básica do formulário em HTML foi difícil ao entender os elementos como `<form>`, `<input>` e seus atributos;
-- Aplicar estilos CSS para fazer o formulário parecer atraente e responsivo foi desafiador devido ao pouco uso dessa tecnologia no dia a dia;
-- Validar dados de entrada do cliente utilizando JavaScript foi complexo inicialmente, além de ser difícil armazenar e recuperar dados do localStorage e garantir que o formulário funcionasse corretamente em todos os navegadores;
-- Outras dificuldades que ainda estão sendo aprendidas.
+### **2. Validação Robusta**
+- Adicionadas verificações no JavaScript para garantir que os campos sejam preenchidos corretamente:
+  - Validação de e-mail e telefone utilizando expressões regulares.
+  - Prevenção de cadastro com campos vazios.
 
-Para superar as dificuldades, além dos cursos da Udemy, segui tutoriais de passo a passo e busquei compreender os conceitos por trás de cada tecnologia. Embora o sistema não esteja 100% perfeito a experiência foi muito enriquecedora.
+### **3. Experiência do Usuário**
+- Feedback visual para ações do usuário (mensagens de sucesso ou erro).
+- Adicionado diálogo de confirmação para exclusões.
+
+### **4. Uso de Boas Práticas**
+- Código mais limpo e legível.
+- Redução de duplicidade utilizando funções reutilizáveis.
 
 ---
 
-Este README segue as melhores práticas, conforme recomendado no Programa de Bolsas Compass UOL e AWS.
+## **🤔 Desafios Superados**
+
+- **Validação de dados:** Aplicar validações no formulário usando expressões regulares e garantir usabilidade.
+- **Persistência de dados:** Configurar e manipular corretamente o localStorage para salvar e recuperar informações.
+- **Melhorias de UX/UI:** Criar uma interface visual agradável e garantir uma boa experiência para o usuário.
+- **Organização do código:** Modularizar o JavaScript para facilitar a manutenção e a reutilização.
 
 ---
+
+Este README segue as melhores práticas recomendadas durante o Programa de Bolsas Compass UOL e AWS. 😊
+
+--- 
