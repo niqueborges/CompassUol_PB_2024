@@ -2,17 +2,30 @@
 
 ## **👥 Desenvolvedores**
 
-Este repositório foi desenvolvido por um grupo de alunos participantes do **Programa de Bolsas Compass UOL 2024**. As contribuições de todos os membros do grupo foram essenciais para a realização dos projetos e para o aprendizado coletivo.
+Este repositório foi desenvolvido por um grupo de alunos participantes do **Programa de Bolsas Compass UOL 2024**. As contribuições de todos os membros do grupo foram essenciais para a realização dos projetos e para o aprendizado coletivo. Entretanto, esta branch irá refatorar o projeto para ser usado localmente sem AWS.
 
 - **Gerson Ramos**
 - **Iuri Souza**
-- **Monique da Silva Borges**
+- **Monique da Silva Borges** (Quem refatorou)
 
 ---
 
 # **Projeto NBA API** 🏀
 
 *Sistema em JavaScript/NodeJS que produz uma interface para consulta de API pública.*
+
+## **📑 Índice**
+
+1. [📂 Estrutura do Projeto](#-estrutura-do-projeto)
+2. [🛠️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
+3. [📁 Estrutura de Diretórios](#-estrutura-de-diretórios)
+4. [💻 Funcionalidades](#-funcionalidades)
+5. [🚀 Como Usar](#-como-usar)
+6. [🛠️ Etapas do Projeto](#-etapas-do-projeto)
+7. [😓 Dificuldades](#-dificuldades)
+8. [📜 Licença](#-licença)
+
+---
 
 ## **📂 Estrutura do Projeto**
 
@@ -35,7 +48,6 @@ Este repositório foi desenvolvido por um grupo de alunos participantes do **Pro
 - ![CSS Badge](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
 - ![JavaScript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
 - ![Node.js Badge](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-- ![AWS Badge](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
 - ![Docker Badge](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
 ---
@@ -60,7 +72,7 @@ Este repositório contém o código-fonte do projeto **NBA API**:
 
 - Consulta de dados da API pública da NBA.
 - Exibição dos dados em uma interface simples e interativa.
-- Dockerização da aplicação para fácil implantação.
+- Dockerização da aplicação para fácil execução local.
 - Implementação de API utilizando Node.js.
 
 ---
@@ -78,30 +90,34 @@ Este repositório contém o código-fonte do projeto **NBA API**:
 
 2. **Configurar a Chave da API**:
 
-   Obtenha uma chave de API na [RapidAPI](https://rapidapi.com/api-sports/api/api-nba) e adicione-a no arquivo `routes/nbaRoutes.js` na `const API_KEY`
+   Obtenha uma chave de API na [RapidAPI](https://rapidapi.com/api-sports/api/api-nba) e adicione-a no arquivo `routes/nbaRoutes.js` na `const API_KEY`.
 
-3. **Iniciar a Aplicação**:
+3. **Configurar Docker (opcional)**:
 
-   Acesse a aplicação no navegador usando o endereço [NBA-API-grupo-5](http://44.211.161.65/).
+   Se ainda não tiver o Docker instalado, siga as instruções em [docker.com](https://www.docker.com/get-started) para instalação.
 
-4. **Escolher um Time**:
+4. **Iniciar a Aplicação Localmente com Docker**:
+
+   Execute os seguintes comandos para subir a aplicação com Docker:
+
+   ```bash
+   docker-compose up
+   ```
+
+   Acesse a aplicação no navegador usando o endereço `http://localhost:3000/`.
+
+5. **Escolher um Time**:
 
    Na página principal, selecione um time na lista de times disponíveis.
 
-5. **Verificar Estatísticas do Time**:
+6. **Verificar Estatísticas do Time**:
 
-   Ao escolher um time, você será direcionado para uma página que exibe as estatísticas e os jogadores do time na temporada selecionada.
+   Ao escolher um time, você será direcionado para uma página que exibe as estatísticas e os jogadores do time na temporada selecionada.  
    Você pode alterar a temporada usando o menu suspenso para ver as estatísticas e jogadores de anos diferentes.
 
-6. **Botão de Voltar**:
+7. **Botão de Voltar**:
 
    Utilize o botão de voltar para retornar à página de seleção de times.
-
-7. **Demonstração**:
-
-   Veja a demonstração abaixo para uma visão geral de como usar a aplicação.
-
-   ![Demonstração da Aplicação](src/imagens/como_usar_a_api.gif)
 
 ---
 
@@ -119,9 +135,9 @@ Este repositório contém o código-fonte do projeto **NBA API**:
    - Criação da interface do usuário utilizando HTML, CSS e JavaScript.
    - Implementação das interações com a API via RapidAPI.
 
-4. **Dockerização e Implantação**:
+4. **Dockerização e Execução Local**:
    - Configuração de `Dockerfile` e `docker-compose.yml` para contêineres Docker.
-   - Implantação da aplicação na instância EC2 da AWS.
+   - Execução da aplicação localmente.
 
 5. **Teste e Validação**:
    - Testes funcionais e de usabilidade para garantir a experiência do usuário.
@@ -132,14 +148,13 @@ Este repositório contém o código-fonte do projeto **NBA API**:
 ## **😓 Dificuldades**
 
 - **CORS**: Configuração de CORS para permitir requisições de origens diferentes.
-- **Permissões de EC2**: Problemas de permissão durante a configuração e operação da instância EC2.
+- **Permissões de Docker**: Problemas com permissões ao executar Docker localmente.
 - **Depuração de Erros**: Integração com a API da NBA e depuração de erros nas rotas.
-- **Configuração de Rede**: Configuração correta das regras de segurança na AWS para permitir o acesso público.
 
 ---
 
 ## **📜 Licença**
 
-Este README segue as melhores práticas, conforme recomendado no Programa de Bolsas Compass UOL e AWS.
+Licença MIt
 
 ---
