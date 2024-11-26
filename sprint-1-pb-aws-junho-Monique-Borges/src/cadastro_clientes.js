@@ -1,20 +1,12 @@
 // Factory para criar objetos Cliente
 function ClienteFactory() {
     function criarCliente(nome, dataNascimento, telefone, email) {
-        return {
-            nome,
-            dataNascimento,
-            telefone,
-            email
-        };
+        return { nome, dataNascimento, telefone, email };
     }
-
-    return {
-        criarCliente
-    };
+    return { criarCliente };
 }
 
-// Funções para manipular localStorage
+// Manipulação de localStorage
 const storageKey = 'clientes';
 
 function salvarClientes(clientes) {
@@ -23,35 +15,41 @@ function salvarClientes(clientes) {
 
 function recuperarClientes() {
     const clientes = localStorage.getItem(storageKey);
-    const clientesArray = clientes ? JSON.parse(clientes) : [];
-    console.log('Clientes recuperados do localStorage:', clientesArray);
-    return clientesArray;
+    return clientes ? JSON.parse(clientes) : [];
 }
 
 function adicionarClienteAoLocalStorage(cliente) {
     const clientes = recuperarClientes();
     clientes.push(cliente);
     salvarClientes(clientes);
-    console.log('Cliente adicionado ao localStorage:', cliente);
-    console.log('Clientes no localStorage após adição:', clientes);
+    mostrarMensagem('Cliente cadastrado com sucesso!');
 }
 
 function excluirClienteDoLocalStorage(index) {
     const clientes = recuperarClientes();
-    const clienteExcluido = clientes[index];
-    clientes.splice(index, 1); // Remove o cliente do índice especificado
-    salvarClientes(clientes);
-    console.log('Cliente excluído do localStorage:', clienteExcluido);
-    console.log('Clientes no localStorage após exclusão:', clientes);
+    if (clientes[index]) {
+        clientes.splice(index, 1);
+        salvarClientes(clientes);
+        mostrarMensagem('Cliente excluído com sucesso!', 'erro');
+    }
 }
 
-// Função para exibir os clientes na página
+// Exibição de mensagens
+function mostrarMensagem(mensagem, tipo = 'sucesso') {
+    const mensagemDiv = document.createElement('div');
+    mensagemDiv.textContent = mensagem;
+    mensagemDiv.className = tipo === 'sucesso' ? 'alert alert-success' : 'alert alert-danger';
+    document.body.prepend(mensagemDiv);
+    setTimeout(() => mensagemDiv.remove(), 3000);
+}
+
+// Exibir clientes na página
 function exibirClientes() {
     const listaCadastro = document.getElementById('listaCadastro');
     listaCadastro.innerHTML = '';
 
     const clientes = recuperarClientes();
-    console.log('Clientes recuperados para exibição na página:', clientes);
+    const fragment = document.createDocumentFragment();
 
     clientes.forEach((cliente, index) => {
         const clienteElement = document.createElement('div');
@@ -61,42 +59,42 @@ function exibirClientes() {
             <p><strong>Data de Nascimento:</strong> ${cliente.dataNascimento}</p>
             <p><strong>Telefone:</strong> ${cliente.telefone}</p>
             <p><strong>Email:</strong> ${cliente.email}</p>
-            <button class="btn-excluir">Excluir</button>
-            <hr>
+            <button class="btn btn-danger btn-sm">Excluir</button>
         `;
-        listaCadastro.appendChild(clienteElement);
 
-// Adicionar evento de clique para o botão Excluir
-        const btnExcluir = clienteElement.querySelector('.btn-excluir');
+        const btnExcluir = clienteElement.querySelector('button');
         btnExcluir.addEventListener('click', () => {
-            excluirClienteDoLocalStorage(index);
-            exibirClientes(); // Atualiza a exibição dos clientes na página após exclusão
+            if (confirm('Tem certeza de que deseja excluir este cliente?')) {
+                excluirClienteDoLocalStorage(index);
+                exibirClientes();
+            }
         });
+
+        fragment.appendChild(clienteElement);
     });
+
+    listaCadastro.appendChild(fragment);
 }
 
-// Evento de submit do formulário para cadastrar cliente
+// Evento de submit
 const formCadastro = document.getElementById('formCadastro');
-formCadastro.addEventListener('submit', function(event) {
+formCadastro.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const nome = formCadastro.nome.value;
-    const dataNascimento = formCadastro.dataNascimento.value;
-    const telefone = formCadastro.tel.value;
-    const email = formCadastro.email.value;
+    const { nome, dataNascimento, tel: telefone, email } = formCadastro;
 
-    console.log('Dados do formulário de cadastro:', { nome, dataNascimento, telefone, email });
+    if (!nome.value || !dataNascimento.value || !telefone.value || !email.value) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+    }
 
     const factory = ClienteFactory();
-    const novoCliente = factory.criarCliente(nome, dataNascimento, telefone, email);
+    const novoCliente = factory.criarCliente(nome.value, dataNascimento.value, telefone.value, email.value);
 
     adicionarClienteAoLocalStorage(novoCliente);
-    formCadastro.reset(); // Limpa o formulário após cadastro
-
-    exibirClientes(); // Atualiza a exibição dos clientes na página
-});
-
-// Exibir clientes ao carregar a página
-window.addEventListener('DOMContentLoaded', () => {
+    formCadastro.reset();
     exibirClientes();
 });
+
+// Exibir clientes ao carregar
+window.addEventListener('DOMContentLoaded', exibirClientes);
